@@ -99,7 +99,7 @@ export const blogPosts = [
           },
           {
             title: "Fix Technical Issues",
-            description: "Make sure your website is secure, loads quickly, and looks good on mobile devices. These technical improvements help your search engine rankings",
+            description: "Make sure your website is secure, loads quickly, and looks good on mobile devices. These technical improvements help your search engine rankings.",
             icon: {
               paths: [
                 "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
@@ -109,7 +109,7 @@ export const blogPosts = [
           },
           {
             title: "Build Links with Local Sites",
-            description: "Partner with local blogs, directories, or influencers to get links pointing to your site. Good backlinks show search engines that your site is reliable.",
+            description: "Partner with local blogs, directories, or influencers to get links pointing to your site. Good backlinks show search engines that your site is reliable and valuable.",
             icon: {
               paths: [
                 "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
