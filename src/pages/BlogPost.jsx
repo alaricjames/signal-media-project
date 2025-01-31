@@ -118,22 +118,8 @@ const BlogPost = () => {
       </div>
 
       <div className="mt-12 pt-8 border-t">
-        <h3 className="text-xl font-bold mb-4">
-          {post.slug.includes('seo') 
-            ? "Need Help with Your SEO?" 
-            : post.slug.includes('social-media') 
-              ? "Need Help with Your Social Media Marketing?"
-              : "Need Help with Your Digital Marketing?"
-          }
-        </h3>
-        <p className="mb-6">
-          {post.slug.includes('seo')
-            ? "Contact Signal Media for professional SEO services tailored for the Zimbabwean market."
-            : post.slug.includes('social-media')
-              ? "Contact Signal Media for professional social media marketing services to grow your brand."
-              : "Contact Signal Media for professional digital marketing services tailored for your business."
-          }
-        </p>
+        <h3 className="text-xl font-bold mb-4">Need Help with Your {post.slug.includes('seo') ? 'SEO' : 'Social Media Marketing'}?</h3>
+        <p className="mb-6">Contact Signal Media for professional {post.slug.includes('seo') ? 'SEO services tailored for the Zimbabwean market' : 'social media marketing services to grow your brand'}.</p>
         <Link to="/#contact" className="gradient-bg text-white px-6 py-3 rounded hover:opacity-90 inline-block">
           Contact Us
         </Link>
