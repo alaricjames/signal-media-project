@@ -124,9 +124,9 @@ export const blogPosts = [
       content: {
         intro: "Harare is full of businesses competing for attention. To get noticed in today's digital world, companies need to use Search Engine Optimization (SEO). SEO might sound complicated, but it helps businesses show up when people search online. This makes a huge difference in getting more customers and staying ahead of competitors.",
         introHighlight: {
-            text: "Search Engine Optimization (SEO)",
-            type: "bold"
-          },
+          text: "Search Engine Optimization (SEO)",
+          type: "bold"
+        },
         benefits: [
           {
             title: "More People Find Your Business Online",
