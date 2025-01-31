@@ -40,7 +40,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/#home" className="text-gray-600 hover:text-gray-900">Home</Link>
             <Link to="/#services" className="text-gray-600 hover:text-gray-900">Services</Link>
-            <Link to="/#about" className="text-gray-600 hover:text-gray-900">About</Link>
+            <Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link>
             <Link to="/#blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
             <Link to="/#contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
           </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link to="/#home" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Home</Link>
             <Link to="/#services" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Services</Link>
-            <Link to="/#about" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">About</Link>
+            <Link to="/about" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">About</Link>
             <Link to="/#blog" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Blog</Link>
             <Link to="/#contact" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Contact</Link>
           </div>

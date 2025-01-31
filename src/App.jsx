@@ -8,6 +8,7 @@ import WebDesignFeatures from './components/WebDesignFeatures';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import BlogPost from './pages/BlogPost';
+import AboutPage from './pages/AboutPage';
 import './App.css';
 
 // Layout component that wraps all pages with consistent Navbar and Footer
@@ -44,6 +45,9 @@ function App() {
         <Route path="/" element={<Layout />}>
           {/* Index route for home page */}
           <Route index element={<HomePage />} />
+          
+          {/* About page route */}
+          <Route path="/about" element={<AboutPage />} />
           
           {/* Blog post route */}
           <Route path="blog/:slug" element={<BlogPost />} />
