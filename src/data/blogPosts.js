@@ -1,5 +1,121 @@
 export const blogPosts = [
     {
+      id: 2,
+      slug: "social-media-marketing-strategy",
+      title: "Organic Growth vs Paid Advertising: A Complete Social Media Strategy",
+      date: "January 15, 2025",
+      summary: "Discover how to balance organic social media growth with paid advertising to create a powerful, comprehensive social media marketing strategy.",
+      content: {
+        intro: "In today's digital landscape, social media has become the cornerstone of brand communication and customer engagement. While organic social media builds authentic connections, paid advertising amplifies your reach. Understanding how to leverage both is crucial for business success in the digital age.",
+        benefits: [
+          {
+            title: "Build Authentic Connections",
+            description: "Organic social media presence helps build genuine relationships with your audience through consistent engagement, valuable content, and community building. This creates long-term brand loyalty and trust.",
+            icon: {
+              paths: [
+                "M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z",
+                "M2 8.118a2 2 0 012-2h12a2 2 0 012 2v0L10 12 2 8.118z"
+              ],
+              color: "purple"
+            }
+          },
+          {
+            title: "Targeted Advertising",
+            description: "Paid social media advertising offers precise audience targeting, allowing you to reach potential customers based on demographics, interests, behaviors, and more. This ensures your marketing budget is spent efficiently.",
+            icon: {
+              paths: [
+                "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+              ],
+              color: "pink"
+            }
+          },
+          {
+            title: "Measurable Results",
+            description: "Both organic and paid strategies provide detailed analytics, helping you understand what content resonates with your audience and how to optimize your social media marketing efforts for better results.",
+            icon: {
+              paths: [
+                "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ],
+              color: "indigo"
+            }
+          },
+          {
+            title: "Increased Brand Visibility",
+            description: "Combining organic content with paid promotion creates multiple touchpoints for your audience, increasing brand recognition and keeping your business top-of-mind when customers are ready to make purchasing decisions.",
+            icon: {
+              paths: [
+                "M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+                "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+              ],
+              color: "blue"
+            }
+          },
+          {
+            title: "Cost-Effective Marketing",
+            description: "While organic social media requires time investment, paid advertising can be scaled based on your budget. This flexibility allows businesses of all sizes to create effective social media marketing strategies.",
+            icon: {
+              paths: [
+                "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ],
+              color: "green"
+            }
+          }
+        ],
+        howTo: [
+          {
+            title: "Create Engaging Content",
+            description: "Develop a content calendar that mixes educational, entertaining, and promotional content. Use high-quality images, videos, and interactive elements to increase engagement.",
+            icon: {
+              paths: [
+                "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+              ],
+              color: "purple"
+            }
+          },
+          {
+            title: "Optimize Paid Campaigns",
+            description: "Start with small test budgets to identify what works best. Use A/B testing for ad creative and targeting options to maximize your return on ad spend.",
+            icon: {
+              paths: [
+                "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              ],
+              color: "pink"
+            }
+          },
+          {
+            title: "Engage With Your Audience",
+            description: "Respond to comments, messages, and mentions promptly. Create polls, questions, and interactive content to encourage two-way communication.",
+            icon: {
+              paths: [
+                "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ],
+              color: "indigo"
+            }
+          },
+          {
+            title: "Monitor Analytics",
+            description: "Track key metrics like engagement rates, reach, click-through rates, and conversion rates. Use these insights to refine your strategy continuously.",
+            icon: {
+              paths: [
+                "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ],
+              color: "blue"
+            }
+          },
+          {
+            title: "Stay Platform-Relevant",
+            description: "Adapt your content and strategy for each social media platform's unique features and audience expectations. What works on Instagram might not work on LinkedIn.",
+            icon: {
+              paths: [
+                "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+              ],
+              color: "green"
+            }
+          }
+        ]
+      }
+    },
+    {
       id: 1,
       slug: "why-seo-matters-harare",
       title: "Why SEO Matters for Businesses in Harare, Zimbabwe",
