@@ -9,6 +9,7 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import BlogPost from './pages/BlogPost';
 import AboutPage from './pages/AboutPage';
+import BlogListPage from './pages/BlogListPage';
 import './App.css';
 
 // Layout component that wraps all pages with consistent Navbar and Footer
@@ -49,7 +50,8 @@ function App() {
           {/* About page route */}
           <Route path="/about" element={<AboutPage />} />
           
-          {/* Blog post route */}
+          {/* Blog routes */}
+          <Route path="/blog" element={<BlogListPage />} />
           <Route path="blog/:slug" element={<BlogPost />} />
         </Route>
       </Routes>
