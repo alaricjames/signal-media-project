@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -39,35 +39,9 @@ const HomePage = () => {
   );
 };
 
-const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', updatePosition);
-    return () => window.removeEventListener('mousemove', updatePosition);
-  }, []);
-
-  return (
-    <>
-      <div 
-        className="custom-cursor" 
-        style={{ left: `${position.x}px`, top: `${position.y}px` }}
-      />
-      <div 
-        className="custom-cursor-dot"
-        style={{ left: `${position.x}px`, top: `${position.y}px` }}
-      />
-    </>
-  );
-};
-
 function App() {
   return (
     <Router>
-      <CustomCursor />
       <Routes>
         <Route path="/" element={<Layout />}>
           {/* Index route for home page */}
