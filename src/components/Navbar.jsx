@@ -5,6 +5,10 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  const handleNavigation = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
@@ -19,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center" onClick={handleNavigation}>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 100 100" 
