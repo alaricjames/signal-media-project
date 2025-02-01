@@ -3,11 +3,22 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   const handleNavigation = () => {
     setIsMobileMenuOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if page is scrolled more than 50px
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (location.hash) {
@@ -19,7 +30,11 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className={`fixed w-full transition-all duration-300 z-50 ${
+      isScrolled 
+        ? 'bg-white/80 backdrop-blur-md shadow-lg mx-auto px-4 mt-4 rounded-full max-w-6xl left-1/2 -translate-x-1/2' 
+        : 'bg-white shadow-lg'
+    }`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">

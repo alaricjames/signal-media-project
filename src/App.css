@@ -25,6 +25,11 @@
   a, button, [role="button"], input, select, textarea {
     cursor: none;
   }
+
+  /* Add padding to account for fixed navbar */
+  main {
+    padding-top: 4rem;
+  }
 }
 
 /* Create the custom cursor circle */
