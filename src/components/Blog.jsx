@@ -50,22 +50,12 @@ const Blog = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {(featuredPost.content.benefits || []).slice(0, 3).map((benefit, index) => (
                 <div key={index} className="p-4 border rounded-lg text-center hover-scale">
-                  <svg 
-                    className={`h-12 w-12 text-${benefit.icon?.color || 'purple'}-600 mx-auto mb-3`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    {(benefit.icon?.paths || []).map((path, pathIndex) => (
-                      <path 
-                        key={pathIndex}
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth="2" 
-                        d={path}
-                      />
-                    ))}
-                  </svg>
+                  <img 
+                    loading="lazy"
+                    src={benefit.icon.url}
+                    alt={benefit.title}
+                    className="w-full h-auto mb-3"
+                  />
                   <h4 className="font-semibold mb-2">{benefit.title}</h4>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>

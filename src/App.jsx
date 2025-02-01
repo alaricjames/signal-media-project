@@ -11,6 +11,7 @@ import BlogPost from './pages/BlogPost';
 import AboutPage from './pages/AboutPage';
 import BlogListPage from './pages/BlogListPage';
 import CustomCursor from './components/CustomCursor';
+import SEO from './components/SEO';
 import './App.css';
 
 // Layout component that wraps all pages with consistent Navbar and Footer
@@ -40,9 +41,28 @@ const HomePage = () => {
   );
 };
 
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Signal Media",
+  "description": "Professional Digital Marketing and Web Design Services in Harare",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Harare",
+    "addressCountry": "Zimbabwe"
+  },
+  "image": "/logo.svg",
+  "priceRange": "$$",
+  "url": "https://yourdomain.com"
+};
+
 function App() {
   return (
     <Router>
+      <SEO 
+        description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
+        schema={baseSchema}
+      />
       <CustomCursor />
       <Routes>
         <Route path="/" element={<Layout />}>
