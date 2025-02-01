@@ -6,24 +6,24 @@ const WebDesignFeatures = () => {
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Our Web Design Process</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <svg className="h-12 w-12 text-purple-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <svg className="h-12 w-12 text-purple-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             <h3 className="text-xl font-semibold mb-4">Responsive Design</h3>
             <p className="text-gray-600">Websites that adapt perfectly to all devices, ensuring your content looks stunning on everything from smartphones to desktop computers.</p>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <svg className="h-12 w-12 text-pink-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <svg className="h-12 w-12 text-pink-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
             </svg>
             <h3 className="text-xl font-semibold mb-4">Custom Design</h3>
             <p className="text-gray-600">Bespoke website designs that reflect your brand identity and engage your target audience with purposeful aesthetics.</p>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <svg className="h-12 w-12 text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <svg className="h-12 w-12 text-indigo-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             <h3 className="text-xl font-semibold mb-4">Performance Optimized</h3>
