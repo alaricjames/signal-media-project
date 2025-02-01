@@ -16,8 +16,15 @@
 }
 
 /* Custom cursor styles */
-body {
-  cursor: none; /* Hide the default cursor */
+@media (min-width: 769px) {
+  body {
+    cursor: none; /* Hide the default cursor only on desktop */
+  }
+
+  /* Hide cursor on clickable elements to prevent double cursors */
+  a, button, [role="button"], input, select, textarea {
+    cursor: none;
+  }
 }
 
 /* Create the custom cursor circle */
@@ -29,10 +36,10 @@ body {
   position: fixed;
   pointer-events: none; /* Ensures the circle doesn't interfere with clicking */
   z-index: 9999;
-  transition: transform 0.1s ease; /* Smooth movement */
+  transition: transform 0.1s ease, background-color 0.3s ease; /* Smooth movement and color transition */
 }
 
-/* Hide cursor on clickable elements to prevent double cursors */
-a, button, [role="button"], input, select, textarea {
-  cursor: none;
+/* White cursor for dark backgrounds */
+.cursor-light {
+  background-color: white;
 }
