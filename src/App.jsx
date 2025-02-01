@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import BlogPost from './pages/BlogPost';
 import AboutPage from './pages/AboutPage';
 import BlogListPage from './pages/BlogListPage';
+import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 // Layout component that wraps all pages with consistent Navbar and Footer
@@ -42,6 +43,7 @@ const HomePage = () => {
 function App() {
   return (
     <Router>
+      <CustomCursor />
       <Routes>
         <Route path="/" element={<Layout />}>
           {/* Index route for home page */}

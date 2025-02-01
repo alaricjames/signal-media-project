@@ -14,3 +14,25 @@
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+
+/* Custom cursor styles */
+body {
+  cursor: none; /* Hide the default cursor */
+}
+
+/* Create the custom cursor circle */
+.cursor {
+  width: 12px;
+  height: 12px;
+  background-color: #7C3AED; /* Deep purple color matching your logo */
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none; /* Ensures the circle doesn't interfere with clicking */
+  z-index: 9999;
+  transition: transform 0.1s ease; /* Smooth movement */
+}
+
+/* Hide cursor on clickable elements to prevent double cursors */
+a, button, [role="button"], input, select, textarea {
+  cursor: none;
+}
