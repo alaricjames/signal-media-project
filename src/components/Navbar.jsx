@@ -73,8 +73,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu - Updated with subtle rounded corners */}
-        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white shadow-lg rounded-md mt-2`}>
+        {/* Mobile Menu - Updated styling */}
+        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white shadow-lg mt-2 absolute left-0 right-0 top-full`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link to="/#home" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Home</Link>
             <Link to="/#services" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Services</Link>
