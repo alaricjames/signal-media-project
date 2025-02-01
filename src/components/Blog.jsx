@@ -6,7 +6,7 @@ const Blog = () => {
   // Defensive check for blog posts
   if (!blogPosts || blogPosts.length === 0) {
     return (
-      <div id="blog" className="py-20 bg-gray-50">
+      <div id="blog" className="py-20 section-alt">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">Latest Insights</h2>
           <p className="text-gray-600">No blog posts available at the moment.</p>
@@ -21,7 +21,7 @@ const Blog = () => {
   // Defensive check for post content
   if (!featuredPost.content || !featuredPost.content.benefits) {
     return (
-      <div id="blog" className="py-20 bg-gray-50">
+      <div id="blog" className="py-20 section-alt">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">Latest Insights</h2>
           <p className="text-gray-600">Blog post content is incomplete.</p>
@@ -31,12 +31,12 @@ const Blog = () => {
   }
 
   return (
-    <div id="blog" className="py-20 bg-gray-50">
+    <div id="blog" className="py-20 section-alt">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Latest Insights</h2>
         
         {/* Featured Blog Post */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+        <div className="card-surface rounded-lg overflow-hidden mb-12">
           <div className="p-8">
             <div className="flex items-center mb-6">
               <svg className="h-8 w-8 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

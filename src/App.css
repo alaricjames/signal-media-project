@@ -5,9 +5,48 @@
   text-align: left;
 }
 
-/* Our custom styles */
+/* Modern color palette */
+:root {
+  /* Primary colors */
+  --primary-purple: #7C3AED;
+  --primary-pink: #DB2777;
+  --primary-blue: #3B82F6;
+  
+  /* Background colors */
+  --bg-slate-50: #F8FAFC;
+  --bg-slate-100: #F1F5F9;
+  --bg-slate-800: #1E293B;
+  
+  /* Surface colors */
+  --surface-white: #FFFFFF;
+  --surface-dark: #0F172A;
+  
+  /* Accent colors for depth */
+  --accent-purple-100: #F3E8FF;
+  --accent-purple-900: #581C87;
+}
+
+/* Update background colors */
+body {
+  background-color: var(--bg-slate-50);
+  color: var(--surface-dark);
+}
+
+/* Card and container styles */
+.card-surface {
+  background-color: var(--surface-white);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(135deg, #4C1D95 0%, #7C3AED 50%, #DB2777 100%);
+  background: linear-gradient(135deg, var(--accent-purple-900) 0%, var(--primary-purple) 50%, var(--primary-pink) 100%);
+}
+
+/* Section backgrounds */
+.section-alt {
+  background-color: var(--bg-slate-100);
 }
 
 .hover-scale:hover {
