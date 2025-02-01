@@ -73,14 +73,14 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden`}>
+        {/* Mobile Menu - Updated with subtle rounded corners */}
+        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white shadow-lg rounded-md mt-2`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link to="/#home" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Home</Link>
-            <Link to="/#services" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Services</Link>
-            <Link to="/about" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">About</Link>
-            <Link to="/blog" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Blog</Link>
-            <Link to="/#contact" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Contact</Link>
+            <Link to="/#home" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Home</Link>
+            <Link to="/#services" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Services</Link>
+            <Link to="/about" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">About</Link>
+            <Link to="/blog" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Blog</Link>
+            <Link to="/#contact" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Contact</Link>
           </div>
         </div>
       </div>
