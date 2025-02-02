@@ -50,7 +50,11 @@ const Blog = () => {
             {(featuredPost.content.benefits || []).slice(0, 3).map((benefit, index) => (
               <div 
                 key={index} 
-                style={{ background: '#1f1154' }} 
+                style={{ 
+                  backgroundColor: '#150a41',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  color: 'white'
+                }} 
                 className="p-6 rounded-lg text-center"
               >
                 <svg 
@@ -70,7 +74,7 @@ const Blog = () => {
                   ))}
                 </svg>
                 <h4 style={{ color: 'white' }} className="font-semibold mb-2">{benefit.title}</h4>
-                <p style={{ color: 'rgba(255, 255, 255, 0.9)' }}>{benefit.description}</p>
+                <p style={{ color: 'white' }}>{benefit.description}</p>
               </div>
             ))}
           </div>
