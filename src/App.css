@@ -8,45 +8,87 @@
 /* Modern color palette */
 :root {
   /* Primary colors */
+  --primary-dark: #150a41;  /* Main dark color */
   --primary-purple: #7C3AED;
   --primary-pink: #DB2777;
-  --primary-blue: #3B82F6;
   
   /* Background colors */
-  --bg-slate-50: #F8FAFC;
-  --bg-slate-100: #F1F5F9;
-  --bg-slate-800: #1E293B;
+  --bg-darker: #0d0629;     /* Slightly darker than main */
+  --bg-main: #150a41;       /* Main background */
+  --bg-lighter: #1f1154;    /* Slightly lighter for contrast */
   
-  /* Surface colors */
-  --surface-white: #FFFFFF;
-  --surface-dark: #0F172A;
+  /* Text colors */
+  --text-light: #e2e8f0;    /* Light gray for main text */
+  --text-muted: #94a3b8;    /* Muted gray for secondary text */
+  --text-bright: #ffffff;    /* White for emphasis */
   
-  /* Accent colors for depth */
-  --accent-purple-100: #F3E8FF;
-  --accent-purple-900: #581C87;
+  /* Accent colors */
+  --accent-purple: #7e6190;
+  --accent-blue: #487fa1;
+  
+  /* Gradient combinations */
+  --gradient-hero: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-main) 50%, var(--primary-purple) 100%);
+  --gradient-card: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-lighter) 100%);
 }
 
-/* Update background colors */
+/* Base styles */
 body {
-  background-color: var(--bg-slate-50);
-  color: var(--surface-dark);
+  background-color: var(--bg-main);
+  color: var(--text-light);
 }
 
 /* Card and container styles */
 .card-surface {
-  background-color: var(--surface-white);
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  background: var(--bg-lighter);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
 
-/* Gradient backgrounds */
-.gradient-bg {
-  background: linear-gradient(135deg, var(--accent-purple-900) 0%, var(--primary-purple) 50%, var(--primary-pink) 100%);
+/* Navbar styles */
+.navbar {
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(21, 10, 65, 0.85); /* --bg-main with opacity */
+  backdrop-filter: blur(8px);
+}
+
+/* Text styles */
+.text-gray-600 {
+  color: var(--text-muted);
+}
+
+.text-gray-900 {
+  color: var(--text-bright);
+}
+
+/* Links and interactive elements */
+a:hover {
+  color: var(--text-bright);
+}
+
+/* Form elements */
+input, textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+}
+
+input:focus, textarea:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-purple);
 }
 
 /* Section backgrounds */
 .section-alt {
-  background-color: var(--bg-slate-100);
+  background: var(--bg-darker);
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: var(--gradient-hero);
 }
 
 .hover-scale:hover {
