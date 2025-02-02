@@ -39,9 +39,10 @@ body {
 
 /* Card and container styles */
 .card-surface {
-  background: rgba(21, 10, 65, 0.6);  /* Semi-transparent dark purple */
+  background: rgba(21, 10, 65, 0.8);  /* Increased opacity for better contrast */
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 /* Navbar styles */
@@ -57,6 +58,10 @@ body {
 }
 
 /* Text styles */
+.text-gray-200 {
+  color: rgba(255, 255, 255, 0.9);  /* Brighter text for better visibility */
+}
+
 .text-gray-600 {
   color: rgba(255, 255, 255, 0.8);
 }
