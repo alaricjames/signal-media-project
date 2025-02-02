@@ -39,10 +39,14 @@ body {
 
 /* Card and container styles */
 .card-surface {
-  background: rgba(21, 10, 65, 0.8);  /* Increased opacity for better contrast */
+  background: rgba(21, 10, 65, 0.95);  /* Much darker, almost opaque background */
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
+}
+
+/* Blog specific card styles - add this new class */
+.blog-card {
+  background: rgba(48, 24, 110, 0.95);  /* Different shade for blog cards */
 }
 
 /* Navbar styles */

@@ -77,11 +77,41 @@ const Navbar = () => {
         <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden absolute w-full left-0 top-full mt-2`}>
           <div className="bg-[#150a41]/90 backdrop-blur-md shadow-lg rounded-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link to="/#home" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Home</Link>
-              <Link to="/#services" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Services</Link>
-              <Link to="/about" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">About</Link>
-              <Link to="/blog" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Blog</Link>
-              <Link to="/#contact" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Contact</Link>
+              <Link 
+                to="/#home" 
+                onClick={handleNavigation} 
+                className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm"
+              >
+                Home
+              </Link>
+              <Link 
+                to="/#services" 
+                onClick={handleNavigation}
+                className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm"
+              >
+                Services
+              </Link>
+              <Link 
+                to="/about" 
+                onClick={handleNavigation}
+                className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm"
+              >
+                About
+              </Link>
+              <Link 
+                to="/blog" 
+                onClick={handleNavigation}
+                className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm"
+              >
+                Blog
+              </Link>
+              <Link 
+                to="/#contact" 
+                onClick={handleNavigation}
+                className="block px-3 py-2 text-gray-200 hover:text-white bg-white/10 hover:bg-white/20 rounded-full text-center mt-2 mx-2"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
