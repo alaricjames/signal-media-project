@@ -57,11 +57,15 @@ body {
 
 /* Text styles */
 .text-gray-600 {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.8);  /* Consistent pale gray */
+}
+
+.text-gray-700 {
+  color: rgba(255, 255, 255, 0.9);  /* Slightly brighter */
 }
 
 .text-gray-900 {
-  color: var(--text-bright);
+  color: #ffffff;  /* Full white for emphasis */
 }
 
 /* Links and interactive elements */
@@ -153,4 +157,13 @@ input:focus, textarea:focus {
 
 .border-blue-600 {
   border-left-color: var(--primary-blue);
+}
+
+/* Navbar specific styles */
+.navbar-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-text:hover {
+  color: #ffffff;
 }

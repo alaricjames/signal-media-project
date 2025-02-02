@@ -30,13 +30,13 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className={`fixed w-full transition-all duration-300 z-50 ${
+    <nav className={`fixed w-full transition-all duration-300 z-50 mx-auto px-4 mt-4 rounded-full max-w-6xl left-1/2 -translate-x-1/2 ${
       isScrolled 
-        ? 'bg-opacity-85 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
+        ? 'bg-[#150a41]/60 backdrop-blur-md shadow-lg' 
+        : 'bg-[#150a41]/40 backdrop-blur-sm'
     }`}>
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center py-3">
           <div className="flex items-center">
             <Link to="/" className="flex items-center" onClick={handleNavigation}>
               <svg 
@@ -53,18 +53,18 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/#home" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link to="/#services" className="text-gray-600 hover:text-gray-900">Services</Link>
-            <Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link>
-            <Link to="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
-            <Link to="/#contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
+            <Link to="/#home" className="text-gray-200 hover:text-white">Home</Link>
+            <Link to="/#services" className="text-gray-200 hover:text-white">Services</Link>
+            <Link to="/about" className="text-gray-200 hover:text-white">About</Link>
+            <Link to="/blog" className="text-gray-200 hover:text-white">Blog</Link>
+            <Link to="/#contact" className="text-gray-200 hover:text-white">Contact</Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
-              className="text-gray-600 hover:text-gray-900 focus:outline-none"
+              className="text-gray-200 hover:text-white focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -73,14 +73,14 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu - Updated styling */}
-        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white shadow-lg mt-2 absolute left-0 right-0 top-full`}>
+        {/* Mobile Menu */}
+        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-[#150a41]/90 backdrop-blur-md shadow-lg mt-2 rounded-lg`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link to="/#home" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Home</Link>
-            <Link to="/#services" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Services</Link>
-            <Link to="/about" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">About</Link>
-            <Link to="/blog" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Blog</Link>
-            <Link to="/#contact" className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm">Contact</Link>
+            <Link to="/#home" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Home</Link>
+            <Link to="/#services" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Services</Link>
+            <Link to="/about" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">About</Link>
+            <Link to="/blog" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Blog</Link>
+            <Link to="/#contact" className="block px-3 py-2 text-gray-200 hover:text-white hover:bg-[#150a41]/80 rounded-sm">Contact</Link>
           </div>
         </div>
       </div>
