@@ -48,6 +48,7 @@ body {
 .navbar {
   background: rgba(255, 255, 255, 0.05);  /* Very transparent white */
   transition: all 0.4s ease;
+  z-index: 50;
 }
 
 .navbar.scrolled {
@@ -170,14 +171,22 @@ input:focus, textarea:focus {
 
 /* Hero section styles */
 .hero-section {
-  margin-top: 0;  /* Remove top margin */
-  padding-top: 7rem;  /* Add padding to maintain text position */
+  margin: 0;
+  padding: 0;
   background: var(--gradient-hero);
-  min-height: 100vh;  /* Ensure full viewport height */
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 /* Mobile menu adjustments */
 .mobile-menu {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
+}
+
+/* Remove any top padding from main content */
+main {
+  padding-top: 0;
 }
