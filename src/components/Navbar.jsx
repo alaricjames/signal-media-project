@@ -32,8 +32,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full transition-all duration-300 z-50 mx-auto px-4 mt-4 rounded-full max-w-6xl left-1/2 -translate-x-1/2 ${
       isScrolled 
-        ? 'bg-[#150a41]/60 backdrop-blur-md shadow-lg' 
-        : 'bg-[#150a41]/40 backdrop-blur-sm'
+        ? 'bg-white/10 backdrop-blur-md shadow-lg' 
+        : 'bg-white/5 backdrop-blur-sm'
     }`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-3">
@@ -57,7 +57,7 @@ const Navbar = () => {
             <Link to="/#services" className="text-gray-200 hover:text-white">Services</Link>
             <Link to="/about" className="text-gray-200 hover:text-white">About</Link>
             <Link to="/blog" className="text-gray-200 hover:text-white">Blog</Link>
-            <Link to="/#contact" className="text-gray-200 hover:text-white">Contact</Link>
+            <Link to="/#contact" className="text-gray-200 hover:text-white px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-all">Contact</Link>
           </div>
 
           {/* Mobile menu button */}
