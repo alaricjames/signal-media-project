@@ -26,7 +26,10 @@ const BlogPost = () => {
       <p className="text-gray-600 mb-8">{post.date}</p>
       
       <div className="prose lg:prose-xl">
-        <p className="text-lg leading-relaxed text-gray-700 mb-12 bg-gray-50 p-6 rounded-lg border-l-4 border-purple-500">
+        <p 
+          style={{ backgroundColor: 'rgba(21, 10, 65, 0.3)' }}
+          className="text-lg leading-relaxed text-white/90 mb-12 p-6 rounded-lg border border-white/10"
+        >
           {post.content.intro}
         </p>
         
@@ -69,9 +72,13 @@ const BlogPost = () => {
         <h2 className="text-3xl font-bold mb-8 text-gray-900">How to Implement</h2>
         <div className="grid gap-8">
           {post.content.howTo.map((step, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow">
+            <div 
+              key={index} 
+              style={{ backgroundColor: 'rgba(21, 10, 65, 0.3)' }}
+              className="rounded-lg shadow-md p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow border border-white/10"
+            >
               <div className="flex-shrink-0">
-                <div className={`p-3 bg-${step.icon.color}-100 rounded-lg`}>
+                <div className={`p-3 bg-${step.icon.color}-100/10 rounded-lg`}>
                   <svg 
                     className={`h-8 w-8 text-${step.icon.color}-600`} 
                     fill="none" 
@@ -91,8 +98,8 @@ const BlogPost = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">{step.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-white/90">{step.title}</h3>
+                <p className="text-white/80 leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
