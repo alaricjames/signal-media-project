@@ -49,9 +49,9 @@ const Blog = () => {
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {(featuredPost.content.benefits || []).slice(0, 3).map((benefit, index) => (
-                <div key={index} className="p-4 border rounded-lg text-center hover-scale">
+                <div key={index} className="card-surface p-6 rounded-lg text-center">
                   <svg 
-                    className={`h-12 w-12 text-${benefit.icon?.color || 'purple'}-600 mx-auto mb-3`} 
+                    className={`h-12 w-12 text-${benefit.icon?.color || 'purple'}-600 mx-auto mb-4`} 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -66,8 +66,8 @@ const Blog = () => {
                       />
                     ))}
                   </svg>
-                  <h4 className="font-semibold mb-2">{benefit.title}</h4>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <h4 className="font-semibold mb-2 text-white">{benefit.title}</h4>
+                  <p className="text-gray-200">{benefit.description}</p>
                 </div>
               ))}
             </div>

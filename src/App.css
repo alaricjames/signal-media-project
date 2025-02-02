@@ -39,7 +39,7 @@ body {
 
 /* Card and container styles */
 .card-surface {
-  background: var(--bg-lighter);
+  background: rgba(21, 10, 65, 0.6);  /* Semi-transparent dark purple */
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
@@ -58,15 +58,15 @@ body {
 
 /* Text styles */
 .text-gray-600 {
-  color: rgba(255, 255, 255, 0.8);  /* Consistent pale gray */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .text-gray-700 {
-  color: rgba(255, 255, 255, 0.9);  /* Slightly brighter */
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .text-gray-900 {
-  color: #ffffff;  /* Full white for emphasis */
+  color: #ffffff;
 }
 
 /* Links and interactive elements */
@@ -93,7 +93,17 @@ input:focus, textarea:focus {
 
 /* Gradient backgrounds */
 .gradient-bg {
-  background: var(--gradient-hero);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.gradient-bg:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hover-scale:hover {
