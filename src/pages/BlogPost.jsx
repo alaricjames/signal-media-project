@@ -25,21 +25,21 @@ const BlogPost = () => {
       <h1 className="text-4xl font-bold mb-4 text-gray-900">{post.title}</h1>
       <p className="text-gray-600 mb-8">{post.date}</p>
       
-      <div className="prose lg:prose-xl">
+      <div className="prose lg:prose-xl max-w-none">
         <p 
           style={{ backgroundColor: 'rgba(21, 10, 65, 0.3)' }}
-          className="text-lg leading-relaxed text-white/90 mb-12 p-6 rounded-lg border border-white/10"
+          className="text-lg leading-relaxed text-white/90 mb-12 p-6 rounded-lg border border-white/10 !important"
         >
           {post.content.intro}
         </p>
         
         <h2 className="text-3xl font-bold mb-8 text-gray-900">Key Benefits</h2>
-        <div className="grid gap-8 mb-12">
+        <div className="grid gap-8 mb-12 max-w-none">
           {post.content.benefits.map((benefit, index) => (
             <div 
               key={index} 
               style={{ backgroundColor: 'rgba(21, 10, 65, 0.3)' }}
-              className="rounded-lg shadow-md p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow border border-white/10"
+              className="rounded-lg shadow-md p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow border border-white/10 !important"
             >
               <div className="flex-shrink-0">
                 <div className={`p-3 bg-${benefit.icon.color}-100/10 rounded-lg`}>
