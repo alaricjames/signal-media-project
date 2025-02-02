@@ -55,8 +55,8 @@ const BlogPost = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">{benefit.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-gray-900 opacity-90">{benefit.title}</h3>
+                <p className="text-gray-700 leading-relaxed opacity-90">{benefit.description}</p>
               </div>
             </div>
           ))}
