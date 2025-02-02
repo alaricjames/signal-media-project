@@ -33,9 +33,13 @@ const BlogPost = () => {
         <h2 className="text-3xl font-bold mb-8 text-gray-900">Key Benefits</h2>
         <div className="grid gap-8 mb-12">
           {post.content.benefits.map((benefit, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow">
+            <div 
+              key={index} 
+              style={{ backgroundColor: 'rgba(21, 10, 65, 0.3)' }}
+              className="rounded-lg shadow-md p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow border border-white/10"
+            >
               <div className="flex-shrink-0">
-                <div className={`p-3 bg-${benefit.icon.color}-100 rounded-lg`}>
+                <div className={`p-3 bg-${benefit.icon.color}-100/10 rounded-lg`}>
                   <svg 
                     className={`h-8 w-8 text-${benefit.icon.color}-600`} 
                     fill="none" 
@@ -55,8 +59,8 @@ const BlogPost = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 opacity-90">{benefit.title}</h3>
-                <p className="text-gray-700 leading-relaxed opacity-90">{benefit.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-white/90">{benefit.title}</h3>
+                <p className="text-white/80 leading-relaxed">{benefit.description}</p>
               </div>
             </div>
           ))}
