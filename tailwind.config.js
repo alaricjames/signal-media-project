@@ -6,21 +6,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary': '#2F3C7E',
+        'secondary': '#FBEAEB',
+      },
       typography: {
         DEFAULT: {
           css: {
-            color: 'rgba(255, 255, 255, 0.9)',
+            color: '#FBEAEB',
             p: {
-              color: 'rgba(255, 255, 255, 0.9)',
+              color: '#FBEAEB',
             },
             h1: {
-              color: 'white',
+              color: '#FBEAEB',
             },
             h2: {
-              color: 'white',
+              color: '#FBEAEB',
             },
             h3: {
-              color: 'white',
+              color: '#FBEAEB',
             },
           },
         },

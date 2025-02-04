@@ -40,37 +40,37 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="py-20 section-alt">
+    <div id="contact" className="py-20 bg-[#2F3C7E]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-            <p className="text-gray-600 mb-8">
+            <h2 className="text-3xl font-bold mb-6 text-[#FBEAEB]">Get In Touch</h2>
+            <p className="text-[#FBEAEB]/80 mb-8">
               Ready to elevate your digital presence? We're here to help transform your ideas into reality. 
               Reach out to discuss your project, and let's create something amazing together.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
-                <svg className="h-6 w-6 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="h-6 w-6 text-[#FBEAEB] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="text-gray-600">info@signalmedia.co.zw</span>
+                <span className="text-[#FBEAEB]/80">info@signalmedia.co.zw</span>
               </div>
               <div className="flex items-center">
-                <svg className="h-6 w-6 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="h-6 w-6 text-[#FBEAEB] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span className="text-gray-600">+263 77 222 3333</span>
+                <span className="text-[#FBEAEB]/80">+263 77 222 3333</span>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="card-surface p-8 rounded-lg">
+          <div className="bg-[#2F3C7E]/30 p-8 rounded-lg border border-[#FBEAEB]/10">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-700 mb-2">Name</label>
+                <label htmlFor="name" className="block text-[#FBEAEB] mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -78,11 +78,11 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#2F3C7E]/50 border border-[#FBEAEB]/20 rounded-lg focus:ring-2 focus:ring-[#FBEAEB]/30 focus:border-transparent text-[#FBEAEB]"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+                <label htmlFor="email" className="block text-[#FBEAEB] mb-2">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -90,11 +90,11 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#2F3C7E]/50 border border-[#FBEAEB]/20 rounded-lg focus:ring-2 focus:ring-[#FBEAEB]/30 focus:border-transparent text-[#FBEAEB]"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-gray-700 mb-2">Message</label>
+                <label htmlFor="message" className="block text-[#FBEAEB] mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -102,21 +102,21 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#2F3C7E]/50 border border-[#FBEAEB]/20 rounded-lg focus:ring-2 focus:ring-[#FBEAEB]/30 focus:border-transparent text-[#FBEAEB]"
                 ></textarea>
               </div>
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="gradient-bg text-white px-8 py-3 rounded-lg hover:opacity-90 w-full"
+                className="bg-[#FBEAEB] text-[#2F3C7E] px-8 py-3 rounded-lg hover:bg-white transition-all w-full font-semibold"
               >
                 {status === 'sending' ? 'Sending...' : 'Send Message'}
               </button>
               {status === 'success' && (
-                <p className="text-green-600 text-center">Message sent successfully!</p>
+                <p className="text-green-400 text-center">Message sent successfully!</p>
               )}
               {status === 'error' && (
-                <p className="text-red-600 text-center">Failed to send message. Please try again.</p>
+                <p className="text-red-400 text-center">Failed to send message. Please try again.</p>
               )}
             </form>
           </div>

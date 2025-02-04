@@ -8,26 +8,25 @@
 /* Modern color palette */
 :root {
   /* Primary colors */
-  --primary-dark: #150a41;  /* Main dark color */
-  --primary-purple: #7C3AED;
-  --primary-pink: #DB2777;
+  --primary-dark: #2F3C7E;  /* Navy blue */
+  --primary-light: #FBEAEB;  /* Light pink */
   
   /* Background colors */
-  --bg-darker: #0d0629;     /* Slightly darker than main */
-  --bg-main: #150a41;       /* Main background */
-  --bg-lighter: #1f1154;    /* Slightly lighter for contrast */
+  --bg-darker: #252f63;     /* Slightly darker navy */
+  --bg-main: #2F3C7E;       /* Main navy background */
+  --bg-lighter: #3a4a9e;    /* Slightly lighter navy */
   
   /* Text colors */
-  --text-light: #e2e8f0;    /* Light gray for main text */
-  --text-muted: #94a3b8;    /* Muted gray for secondary text */
+  --text-light: #FBEAEB;    /* Light pink for main text */
+  --text-muted: #ffd8d9;    /* Slightly darker pink for secondary text */
   --text-bright: #ffffff;    /* White for emphasis */
   
   /* Accent colors */
-  --accent-purple: #7e6190;
-  --accent-blue: #487fa1;
+  --accent-navy: #2F3C7E;
+  --accent-pink: #FBEAEB;
   
   /* Gradient combinations */
-  --gradient-hero: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-main) 50%, var(--primary-purple) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-main) 50%, var(--bg-lighter) 100%);
   --gradient-card: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-lighter) 100%);
 }
 
@@ -39,14 +38,14 @@ body {
 
 /* Card and container styles */
 .card-surface {
-  background: #150a41;  /* Solid color instead of rgba */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #2F3C7E;
+  border: 1px solid rgba(251, 234, 235, 0.1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
 
 /* Blog specific card styles */
 .blog-card {
-  background: #1f1154;  /* Lighter solid purple for blog cards */
+  background: #3a4a9e;
 }
 
 /* Text styles for blog */
@@ -112,15 +111,15 @@ input:focus, textarea:focus {
 
 /* Gradient backgrounds */
 .gradient-bg {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(251, 234, 235, 0.1);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  border: 1px solid rgba(251, 234, 235, 0.2);
+  color: #FBEAEB;
   transition: all 0.3s ease;
 }
 
 .gradient-bg:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(251, 234, 235, 0.2);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -151,7 +150,7 @@ input:focus, textarea:focus {
 .cursor {
   width: 12px;
   height: 12px;
-  background-color: #7C3AED; /* Deep purple color matching your logo */
+  background-color: #FBEAEB;
   border-radius: 50%;
   position: fixed;
   pointer-events: none; /* Ensures the circle doesn't interfere with clicking */
@@ -161,7 +160,7 @@ input:focus, textarea:focus {
 
 /* White cursor for dark backgrounds */
 .cursor-light {
-  background-color: white;
+  background-color: #2F3C7E;
 }
 
 /* Add this to your existing styles */
