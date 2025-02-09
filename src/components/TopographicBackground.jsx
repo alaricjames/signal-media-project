@@ -15,12 +15,12 @@ const TopographicBackground = () => {
           fill="#2F3C7E" // Main website blue
         />
         
-        {/* Contour paths */}
-        <g opacity="0.15">
-          <path d="M0 0 C286.77 0 573.54 0 869 0..." fill="#2F3C7E" transform="translate(798,321)"/>
-          <path d="M0 0 C1.95418308 2.93127462..." fill="#2F3C7E" transform="translate(386,300)"/>
-          <path d="M0 0 C1.125 1.625 1.125 1.625..." fill="#2F3C7E" transform="translate(1031,238)"/>
-          {/* Add remaining paths with the same fill color */}
+        {/* Contour paths - increased opacity and using white */}
+        <g opacity="0.3">
+          <path d="M0 0 C286.77 0 573.54 0 869 0..." fill="#FFFFFF" transform="translate(798,321)"/>
+          <path d="M0 0 C1.95418308 2.93127462..." fill="#FFFFFF" transform="translate(386,300)"/>
+          <path d="M0 0 C1.125 1.625 1.125 1.625..." fill="#FFFFFF" transform="translate(1031,238)"/>
+          {/* Add remaining paths with white fill */}
         </g>
       </svg>
     </div>
