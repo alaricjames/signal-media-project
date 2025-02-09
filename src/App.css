@@ -262,3 +262,8 @@ main {
 .app {
   /* ... */
 }
+
+/* Debug styles */
+.fixed.inset-0.-z-10 {
+  outline: 2px solid red; /* Temporary to check positioning */
+}
