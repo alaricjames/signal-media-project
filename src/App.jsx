@@ -12,6 +12,7 @@ import AboutPage from './pages/AboutPage';
 import BlogListPage from './pages/BlogListPage';
 import CustomCursor from './components/CustomCursor';
 import SEO from './components/SEO';
+import ContourBackground from './components/ContourBackground';
 import './App.css';
 
 // Layout component that wraps all pages with consistent Navbar and Footer
@@ -58,26 +59,29 @@ const baseSchema = {
 
 function App() {
   return (
-    <Router>
-      <SEO 
-        description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
-        schema={baseSchema}
-      />
-      <CustomCursor />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          {/* Index route for home page */}
-          <Route index element={<HomePage />} />
-          
-          {/* About page route */}
-          <Route path="/about" element={<AboutPage />} />
-          
-          {/* Blog routes */}
-          <Route path="/blog" element={<BlogListPage />} />
-          <Route path="blog/:slug" element={<BlogPost />} />
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <ContourBackground />
+      <Router>
+        <SEO 
+          description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
+          schema={baseSchema}
+        />
+        <CustomCursor />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            {/* Index route for home page */}
+            <Route index element={<HomePage />} />
+            
+            {/* About page route */}
+            <Route path="/about" element={<AboutPage />} />
+            
+            {/* Blog routes */}
+            <Route path="/blog" element={<BlogListPage />} />
+            <Route path="blog/:slug" element={<BlogPost />} />
+          </Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 

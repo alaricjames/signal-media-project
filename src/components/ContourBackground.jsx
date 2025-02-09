@@ -1,13 +1,23 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ContourBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
-      <svg
+      <motion.svg
         className="w-full h-full"
         preserveAspectRatio="xMidYMid slice"
         viewBox="0 0 1000 1000"
         xmlns="http://www.w3.org/2000/svg"
+        animate={{
+          scale: [1, 1.02, 1],
+          rotate: [0, 1, 0],
+        }}
+        transition={{
+          duration: 20,
+          ease: "easeInOut",
+          repeat: Infinity,
+        }}
       >
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -26,7 +36,7 @@ const ContourBackground = () => {
         
         {/* Gradient overlay */}
         <rect width="100%" height="100%" fill="url(#gradient)" />
-      </svg>
+      </motion.svg>
     </div>
   );
 };
