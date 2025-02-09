@@ -240,16 +240,15 @@ main {
   overflow-x: hidden;
 }
 
-/* Add specific z-index layers */
+/* Ensure content is properly layered */
 .app-content {
   position: relative;
   z-index: auto;
 }
 
-/* Update navbar z-index to be above content */
+/* Keep navbar above everything */
 .navbar {
   z-index: 50;
-  /* ... existing styles ... */
 }
 
 /* Check if there are any background colors or z-index values that might interfere */
