@@ -5,12 +5,7 @@ const TopographicBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 pointer-events-none">
       <TopographicSVG 
-        className="w-full h-full" 
-        style={{
-          '--background-color': '#2F3C7E',
-          '--line-color': '#FFFFFF',
-          '--line-opacity': '0.3'
-        }}
+        className="w-full h-full [&_path]:fill-[#171B26] [&_path]:opacity-50" 
       />
     </div>
   );
