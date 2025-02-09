@@ -13,6 +13,7 @@ import BlogListPage from './pages/BlogListPage';
 import CustomCursor from './components/CustomCursor';
 import SEO from './components/SEO';
 import TopographicBackground from './components/TopographicBackground';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import './App.css';
 
 // Layout component that wraps all pages with consistent Navbar and Footer
@@ -59,31 +60,37 @@ const baseSchema = {
 
 function App() {
   return (
-    <div className="relative min-h-screen">
-      <TopographicBackground />
-      <div className="app">
-        <Router>
-          <SEO 
-            description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
-            schema={baseSchema}
-          />
-          <CustomCursor />
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              {/* Index route for home page */}
-              <Route index element={<HomePage />} />
-              
-              {/* About page route */}
-              <Route path="/about" element={<AboutPage />} />
-              
-              {/* Blog routes */}
-              <Route path="/blog" element={<BlogListPage />} />
-              <Route path="blog/:slug" element={<BlogPost />} />
-            </Route>
-          </Routes>
-        </Router>
+    <HelmetProvider>
+      <Helmet>
+        <title>Signal Media | Professional Video & Photography</title>
+        <meta name="description" content="Professional video production and photography services by Signal Media" />
+      </Helmet>
+      <div className="relative min-h-screen">
+        <TopographicBackground />
+        <div className="app">
+          <Router>
+            <SEO 
+              description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
+              schema={baseSchema}
+            />
+            <CustomCursor />
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                {/* Index route for home page */}
+                <Route index element={<HomePage />} />
+                
+                {/* About page route */}
+                <Route path="/about" element={<AboutPage />} />
+                
+                {/* Blog routes */}
+                <Route path="/blog" element={<BlogListPage />} />
+                <Route path="blog/:slug" element={<BlogPost />} />
+              </Route>
+            </Routes>
+          </Router>
+        </div>
       </div>
-    </div>
+    </HelmetProvider>
   );
 }
 
