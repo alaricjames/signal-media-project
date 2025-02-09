@@ -14,13 +14,15 @@ const ContourBackground = () => {
     svg.style.top = '0';
     svg.style.left = '0';
 
-    // Create a basic pattern first to verify SVG rendering
+    // Create a more visible test pattern
     const pattern = `
       <defs>
-        <pattern id="contour-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-          <path d="M0 50 Q 50 0, 100 50" stroke="white" stroke-width="2" fill="none"/>
-          <path d="M0 25 Q 50 -25, 100 25" stroke="white" stroke-width="2" fill="none"/>
-          <path d="M0 75 Q 50 25, 100 75" stroke="white" stroke-width="2" fill="none"/>
+        <pattern id="contour-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+          <path d="M0 100 Q 100 0, 200 100" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M0 50 Q 100 -50, 200 50" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M0 150 Q 100 50, 200 150" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M-100 100 Q 0 0, 100 100" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M100 100 Q 200 0, 300 100" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#contour-pattern)"/>
@@ -46,8 +48,8 @@ const ContourBackground = () => {
         width: '100vw',
         height: '100vh',
         zIndex: -1,
-        opacity: 0.3,
-        backgroundColor: 'rgba(47, 60, 126, 0.1)', // Light navy blue background
+        opacity: 0.4,
+        mixBlendMode: 'soft-light',
         pointerEvents: 'none'
       }}
     />
