@@ -231,3 +231,14 @@ main {
     #F87171 100%
   );
 }
+
+.contour-background {
+  background-color: rgba(0,0,0,0.05); /* Temporary, for testing */
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}

@@ -11,16 +11,17 @@ const ContourBackground = () => {
     container.style.position = 'fixed';
     container.style.top = '0';
     container.style.left = '0';
-    container.style.width = '100%';
-    container.style.height = '100%';
+    container.style.width = '100vw';
+    container.style.height = '100vh';
     container.style.zIndex = '-1';
-    container.style.opacity = '0.08'; // More subtle opacity
+    container.style.opacity = '0.15'; // Increased opacity for testing
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', '100%');
     svg.setAttribute('height', '100%');
-    svg.setAttribute('viewBox', '0 0 213 213'); // Match the original SVG viewBox
+    svg.setAttribute('viewBox', '0 0 213 213');
     svg.style.position = 'absolute';
+    svg.style.overflow = 'visible';
 
     // These are the actual paths from 213_generated.svg
     const paths = [
@@ -34,33 +35,40 @@ const ContourBackground = () => {
       "M71 0C142 0 142 213 213 213"
     ];
 
-    // Create and add paths to SVG
+    // Create and add paths to SVG with more visible styling
     paths.forEach(d => {
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       path.setAttribute('d', d);
-      path.setAttribute('stroke', '#2d3436');
+      path.setAttribute('stroke', '#000000'); // Changed to black for testing
       path.setAttribute('fill', 'none');
-      path.setAttribute('stroke-width', '0.5'); // Thinner lines
-      path.setAttribute('stroke-dasharray', '1000');
-      path.setAttribute('stroke-dashoffset', '1000');
+      path.setAttribute('stroke-width', '1'); // Increased stroke width
+      path.setAttribute('vector-effect', 'non-scaling-stroke');
       
-      // Add animation
-      const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-      animate.setAttribute('attributeName', 'stroke-dashoffset');
-      animate.setAttribute('from', '1000');
-      animate.setAttribute('to', '0');
-      animate.setAttribute('dur', '30s'); // Slower animation
-      animate.setAttribute('repeatCount', 'indefinite');
-      
-      path.appendChild(animate);
       svg.appendChild(path);
     });
 
-    // Add pattern repetition with a larger size
-    svg.innerHTML += `
+    // Add pattern repetition
+    const patternSize = 213; // Match original SVG size
+    svg.innerHTML = `
       <defs>
-        <pattern id="contour-pattern" x="0" y="0" width="426" height="426" patternUnits="userSpaceOnUse">
-          ${svg.innerHTML}
+        <pattern 
+          id="contour-pattern" 
+          x="0" 
+          y="0" 
+          width="${patternSize}" 
+          height="${patternSize}" 
+          patternUnits="userSpaceOnUse"
+          patternTransform="rotate(0)"
+        >
+          ${paths.map(d => `
+            <path 
+              d="${d}" 
+              stroke="#000000" 
+              stroke-width="1" 
+              fill="none" 
+              vector-effect="non-scaling-stroke"
+            />
+          `).join('')}
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#contour-pattern)"/>
@@ -70,7 +78,10 @@ const ContourBackground = () => {
     container.innerHTML = '';
     container.appendChild(svg);
 
-    // Cleanup function
+    // Log for debugging
+    console.log('ContourBackground mounted');
+    console.log('Container dimensions:', container.offsetWidth, container.offsetHeight);
+
     return () => {
       container.innerHTML = '';
     };
