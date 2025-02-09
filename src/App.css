@@ -232,8 +232,9 @@ main {
   );
 }
 
+/* Remove the temporary background color */
 .contour-background {
-  background-color: rgba(0,0,0,0.05); /* Temporary, for testing */
+  pointer-events: none;
 }
 
 .app {
@@ -241,4 +242,5 @@ main {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  background-color: #2F3C7E; /* Your site's background color */
 }
