@@ -203,7 +203,7 @@ input:focus, textarea:focus {
 /* Hero section styles */
 .hero-section {
   position: relative;
-  z-index: 20;
+  z-index: 1;
   background: transparent;
   margin: 0;
   padding: 0;
