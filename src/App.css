@@ -205,8 +205,7 @@ input:focus, textarea:focus {
   margin: 0;
   padding: 0;
   position: relative;
-  z-index: 1;
-  background: var(--gradient-hero);
+  z-index: auto;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -225,12 +224,7 @@ main {
 
 /* Add these styles */
 .bg-contour {
-  background: linear-gradient(
-    135deg,
-    #94A3B8 0%,
-    #E7B1A5 50%,
-    #F87171 100%
-  );
+  background: none;
 }
 
 /* Remove the temporary background color */
@@ -249,7 +243,7 @@ main {
 /* Add specific z-index layers */
 .app-content {
   position: relative;
-  z-index: 1;
+  z-index: auto;
 }
 
 /* Update navbar z-index to be above content */
