@@ -47,7 +47,7 @@ const ContourBackground = () => {
         left: 0,
         width: '100vw',
         height: '100vh',
-        zIndex: -1,
+        zIndex: 999,
         opacity: 0.4,
         mixBlendMode: 'soft-light',
         pointerEvents: 'none'
