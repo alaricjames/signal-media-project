@@ -258,3 +258,8 @@ main {
   z-index: 50;
   /* ... existing styles ... */
 }
+
+/* Check if there are any background colors or z-index values that might interfere */
+.app {
+  /* ... */
+}
