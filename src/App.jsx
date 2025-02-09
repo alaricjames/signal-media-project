@@ -12,7 +12,7 @@ import AboutPage from './pages/AboutPage';
 import BlogListPage from './pages/BlogListPage';
 import CustomCursor from './components/CustomCursor';
 import SEO from './components/SEO';
-import ContourBackground from './components/ContourBackground';
+import TopographicBackground from './components/TopographicBackground';
 import './App.css';
 
 // Layout component that wraps all pages with consistent Navbar and Footer
@@ -59,9 +59,9 @@ const baseSchema = {
 
 function App() {
   return (
-    <div className="app">
-      <ContourBackground />
-      <div className="app-content">
+    <div className="relative min-h-screen">
+      <TopographicBackground />
+      <div className="app">
         <Router>
           <SEO 
             description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
