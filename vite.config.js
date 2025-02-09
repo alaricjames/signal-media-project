@@ -15,9 +15,13 @@ export default defineConfig({
   base: '/',
   publicDir: 'public',
   build: {
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          animations: ['framer-motion']
+        }
       }
     }
   }

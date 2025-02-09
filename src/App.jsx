@@ -60,8 +60,8 @@ const baseSchema = {
 function App() {
   return (
     <div className="relative min-h-screen">
+      <TopographicBackground />
       <div className="app">
-        <TopographicBackground />
         <Router>
           <SEO 
             description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
