@@ -14,15 +14,14 @@ const ContourBackground = () => {
     svg.style.top = '0';
     svg.style.left = '0';
 
-    // Create a more visible test pattern
+    // Simpler, more visible test pattern
     const pattern = `
+      <rect width="100%" height="100%" fill="#FF0000" opacity="0.1"/>  <!-- Red background to test visibility -->
       <defs>
         <pattern id="contour-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-          <path d="M0 100 Q 100 0, 200 100" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-          <path d="M0 50 Q 100 -50, 200 50" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-          <path d="M0 150 Q 100 50, 200 150" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-          <path d="M-100 100 Q 0 0, 100 100" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-          <path d="M100 100 Q 200 0, 300 100" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M0 100 Q 100 0, 200 100" stroke="white" stroke-width="3" fill="none"/>
+          <path d="M0 50 Q 100 -50, 200 50" stroke="white" stroke-width="3" fill="none"/>
+          <path d="M0 150 Q 100 50, 200 150" stroke="white" stroke-width="3" fill="none"/>
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#contour-pattern)"/>
@@ -47,10 +46,10 @@ const ContourBackground = () => {
         left: 0,
         width: '100vw',
         height: '100vh',
-        zIndex: 0,
-        opacity: 0.2,
-        mixBlendMode: 'soft-light',
-        pointerEvents: 'none'
+        zIndex: 1, // Try putting it above content temporarily
+        opacity: 1, // Full opacity for testing
+        pointerEvents: 'none',
+        backgroundColor: 'rgba(255,0,0,0.1)' // Red background to test visibility
       }}
     />
   );
