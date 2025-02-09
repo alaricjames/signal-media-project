@@ -200,13 +200,15 @@ input:focus, textarea:focus {
   color: #ffffff;
 }
 
-/* Hero section styles */
-.hero-section {
+/* Base section styles - apply to all main sections */
+.hero-section,
+.services-section,
+.web-design-section,
+.blog-section,
+.contact-section {
   position: relative;
   z-index: 1;
   background: transparent;
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -246,11 +248,6 @@ main {
 .app-content {
   position: relative;
   z-index: auto;
-}
-
-/* Keep navbar above everything */
-.navbar {
-  z-index: 50;
 }
 
 /* Check if there are any background colors or z-index values that might interfere */
