@@ -4,7 +4,7 @@
   padding: 0;
   text-align: left;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Modern color palette */
@@ -235,6 +235,7 @@ main {
 /* Remove the temporary background color */
 .contour-background {
   pointer-events: none;
+  z-index: 0;
 }
 
 .app {
@@ -243,4 +244,16 @@ main {
   width: 100%;
   overflow-x: hidden;
   background-color: #2F3C7E; /* Your site's background color */
+}
+
+/* Add specific z-index layers */
+.app-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Update navbar z-index to be above content */
+.navbar {
+  z-index: 50;
+  /* ... existing styles ... */
 }

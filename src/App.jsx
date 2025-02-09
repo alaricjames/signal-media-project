@@ -61,26 +61,28 @@ function App() {
   return (
     <div className="app">
       <ContourBackground />
-      <Router>
-        <SEO 
-          description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
-          schema={baseSchema}
-        />
-        <CustomCursor />
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            {/* Index route for home page */}
-            <Route index element={<HomePage />} />
-            
-            {/* About page route */}
-            <Route path="/about" element={<AboutPage />} />
-            
-            {/* Blog routes */}
-            <Route path="/blog" element={<BlogListPage />} />
-            <Route path="blog/:slug" element={<BlogPost />} />
-          </Route>
-        </Routes>
-      </Router>
+      <div className="app-content">
+        <Router>
+          <SEO 
+            description="Professional digital marketing and web design services in Harare, Zimbabwe. Specializing in SEO, social media marketing, and custom website development."
+            schema={baseSchema}
+          />
+          <CustomCursor />
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              {/* Index route for home page */}
+              <Route index element={<HomePage />} />
+              
+              {/* About page route */}
+              <Route path="/about" element={<AboutPage />} />
+              
+              {/* Blog routes */}
+              <Route path="/blog" element={<BlogListPage />} />
+              <Route path="blog/:slug" element={<BlogPost />} />
+            </Route>
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }
