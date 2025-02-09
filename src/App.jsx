@@ -59,7 +59,7 @@ const baseSchema = {
 
 function App() {
   return (
-    <>
+    <div className="app">
       <ContourBackground />
       <Router>
         <SEO 
@@ -81,7 +81,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
