@@ -2,14 +2,16 @@ import React from 'react';
 
 const TopographicBackground = () => {
   return (
-    <div className="fixed inset-0 -z-50 pointer-events-none">
+    <div className="fixed inset-0 -z-50 pointer-events-none" style={{ border: '5px solid yellow' }}>
       <svg 
         className="w-full h-full"
         viewBox="0 0 1920 1097" 
         xmlns="http://www.w3.org/2000/svg"
-        style={{ backgroundColor: '#2F3C7E' }}
       >
-        {/* Base background */}
+        {/* Test rectangle */}
+        <rect x="0" y="0" width="1920" height="1097" fill="red" />
+        
+        {/* Original content */}
         <path 
           d="M0 0 C633.6 0 1267.2 0 1920 0 C1920 362.01 1920 724.02 1920 1097 C1286.4 1097 652.8 1097 0 1097 C0 734.99 0 372.98 0 0 Z" 
           fill="#2F3C7E"
