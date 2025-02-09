@@ -204,8 +204,9 @@ input:focus, textarea:focus {
 .hero-section {
   margin: 0;
   padding: 0;
-  background: var(--gradient-hero);
   position: relative;
+  z-index: 1;
+  background: var(--gradient-hero);
   min-height: 100vh;
   display: flex;
   align-items: center;

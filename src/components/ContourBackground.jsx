@@ -46,10 +46,10 @@ const ContourBackground = () => {
         left: 0,
         width: '100vw',
         height: '100vh',
-        zIndex: 1, // Try putting it above content temporarily
-        opacity: 1, // Full opacity for testing
+        zIndex: 100, // Much higher z-index to be above everything
+        opacity: 0.3, // Lower opacity to blend better
         pointerEvents: 'none',
-        backgroundColor: 'rgba(255,0,0,0.1)' // Red background to test visibility
+        mixBlendMode: 'overlay', // This might help blend with the background better
       }}
     />
   );
