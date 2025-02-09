@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 /* Modern color palette */
@@ -32,8 +34,9 @@
 
 /* Base styles */
 body {
-  background-color: var(--bg-main);
+  background-color: #2F3C7E;
   color: var(--text-light);
+  position: relative;
 }
 
 /* Card and container styles */
@@ -217,4 +220,14 @@ input:focus, textarea:focus {
 /* Remove any top padding from main content */
 main {
   padding-top: 0;
+}
+
+/* Add these styles */
+.bg-contour {
+  background: linear-gradient(
+    135deg,
+    #94A3B8 0%,
+    #E7B1A5 50%,
+    #F87171 100%
+  );
 }
