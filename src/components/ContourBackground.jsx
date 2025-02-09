@@ -10,18 +10,23 @@ const ContourBackground = () => {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', '100%');
     svg.setAttribute('height', '100%');
+    svg.setAttribute('viewBox', '0 0 213 213');
     svg.style.position = 'absolute';
     svg.style.top = '0';
     svg.style.left = '0';
 
-    // Simpler, more visible test pattern
+    // Using the actual paths from 213_generated.svg
     const pattern = `
-      <rect width="100%" height="100%" fill="#FF0000" opacity="0.1"/>  <!-- Red background to test visibility -->
       <defs>
-        <pattern id="contour-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-          <path d="M0 100 Q 100 0, 200 100" stroke="white" stroke-width="3" fill="none"/>
-          <path d="M0 50 Q 100 -50, 200 50" stroke="white" stroke-width="3" fill="none"/>
-          <path d="M0 150 Q 100 50, 200 150" stroke="white" stroke-width="3" fill="none"/>
+        <pattern id="contour-pattern" x="0" y="0" width="213" height="213" patternUnits="userSpaceOnUse">
+          <path d="M0 213C71 213 71 0 142 0" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <path d="M71 213C142 213 142 0 213 0" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <path d="M0 142C71 142 71 71 142 71" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <path d="M71 142C142 142 142 71 213 71" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <path d="M0 71C71 71 71 142 142 142" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <path d="M71 71C142 71 142 142 213 142" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <path d="M0 0C71 0 71 213 142 213" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <path d="M71 0C142 0 142 213 213 213" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#contour-pattern)"/>
@@ -46,10 +51,10 @@ const ContourBackground = () => {
         left: 0,
         width: '100vw',
         height: '100vh',
-        zIndex: 100, // Much higher z-index to be above everything
-        opacity: 0.3, // Lower opacity to blend better
+        zIndex: 100,
+        opacity: 0.15, // Reduced opacity for subtlety
         pointerEvents: 'none',
-        mixBlendMode: 'overlay', // This might help blend with the background better
+        mixBlendMode: 'soft-light', // Changed blend mode for better effect
       }}
     />
   );
