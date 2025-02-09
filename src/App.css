@@ -244,7 +244,6 @@ main {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  background-color: #2F3C7E; /* Your site's background color */
 }
 
 /* Add specific z-index layers */
