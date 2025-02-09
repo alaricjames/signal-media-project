@@ -3,7 +3,7 @@ import TopographicSVG from '../assets/topographic-pattern.svg?react';
 
 const TopographicBackground = () => {
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <div className="fixed inset-0 z-10 pointer-events-none">
       <TopographicSVG className="w-full h-full" />
     </div>
   );
